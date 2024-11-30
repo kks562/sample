@@ -8,7 +8,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/data', {
+      const response = await fetch('https://sample-12.onrender.com/api/data', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: inputValue })
@@ -25,7 +25,7 @@ const App = () => {
   // Fetch data from backend
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/data');
+      const response = await fetch('https://sample-12.onrender.com/api/data');
       const data = await response.json();
       setDataList(data);
     } catch (error) {
